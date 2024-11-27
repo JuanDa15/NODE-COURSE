@@ -1,0 +1,32 @@
+{
+  "name": "node-course",
+  "version": "1.0.0",
+  "description": "Node course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanDa15/NODE-COURSE.git"
+  },
+  "keywords": [
+    "node.js",
+    "javascript"
+  ],
+  "author": "Juan David Osorio Ortiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanDa15/NODE-COURSE/issues"
+  },
+  "homepage": "https://github.com/JuanDa15/NODE-COURSE#readme",
+  "dependencies": {
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}

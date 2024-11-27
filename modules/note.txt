@@ -1,0 +1,6 @@
+This is a note
+ 
+
+for test the file system
+
+with many commands
