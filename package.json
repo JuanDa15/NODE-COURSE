@@ -4,6 +4,7 @@
   "description": "Node course",
   "main": "index.js",
   "scripts": {
+    "dev": "node --watch index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/JuanDa15/NODE-COURSE#readme",
   "dependencies": {
+    "express": "4.21.1",
     "picocolors": "^1.1.1"
   },
   "devDependencies": {
