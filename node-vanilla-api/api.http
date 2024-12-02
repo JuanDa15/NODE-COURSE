@@ -1,0 +1,12 @@
+### Get pokemon
+GET http://127.0.0.1:3000/pokemon/ditto
+
+### Create Pokemon
+POST http://127.0.0.1:3000/pokemon 
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "picachu",
+  "type": "normal"
+}
