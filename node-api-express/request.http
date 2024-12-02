@@ -1,0 +1,15 @@
+### APP INDEX
+GET http://127.0.0.1:3000/
+
+### GET POKEMON
+GET http://127.0.0.1:3000/pokemon/ditto
+
+### CREATE POKEMON  
+POST http://127.0.0.1:3000/pokemon/
+Content-Type: application/json
+
+{
+  "id": "3fsefdsef",
+  "name": "pikachu",
+  "type": "normal"
+}
