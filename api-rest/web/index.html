@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test API</title>
+  <script type="module">
+    fetch('http://127.0.0.1:3002/movies')
+      .then(res => res.json())
+      .then(data => {
+        const html = data.map(movie => {
+          return `
+            <article data-id="${movie.id}">
+              <h2>${movie.title}</h2>
+              <p>${movie.year}</p>
+              <p>${movie.director}</p>
+              <p>${movie.duration}</p>
+              <img src="${movie.poster}" alt="${movie.title}">
+              <button type="button">Delete</button>
+            </article>
+          `
+        }).join('')
+        document.querySelector('body').innerHTML = html
+      })
+
+      document.addEventListener('click', e => {
+        if (e.target.matches('button')) {
+          const article = e.target.closest('article')
+          const id = article.dataset.id
+
+          fetch(`http://127.0.0.1:3002/movies/${id}`, {
+            method: 'DELETE'
+          }).then(res => res.json())
+            .then(data => {
+              console.log(data)
+              if (data.success) {
+                article.remove()
+              }
+            })
+        }
+      })
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

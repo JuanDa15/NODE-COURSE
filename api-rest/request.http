@@ -1,0 +1,56 @@
+### ROOT
+GET http://127.0.0.1:3002/
+
+### LIST ALL MOVIES
+GET http://127.0.0.1:3002/movies
+
+### LIST SPECIFIC MOVIE
+GET http://127.0.0.1:3002/movies/04986507-b3ed-442c-8ae7-4c5df804f896
+
+### LIST MOVIES BY GENRE
+GET http://127.0.0.1:3002/movies?genre=Drama&page=2
+
+### CREATE MOVIE 
+POST http://127.0.0.1:3002/movies
+Content-Type: application/json
+
+{
+  "title": "El hombre araña",
+  "year": 1994,
+  "director": "Quentin Tarantino",
+  "duration": 154,
+  "poster": "https://www.themoviedb.org/t/p/original/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+  "genre": [
+    "Action",
+    "Comedy"
+  ],
+  "rate": 8.9
+}
+
+### UPDATE MOVIE
+PATCH http://127.0.0.1:3002/movies/04986507-b3ed-442c-8ae7-4c5df804f896
+Content-Type: application/json
+
+{
+  "rate": 9.9, 
+}
+
+### PUT MOVIE
+PUT http://127.0.0.1:3002/movies/04986507-b3ed-442c-8ae7-4c5df804f896
+Content-Type: application/json
+
+{
+  "title": "El hombre araña",
+  "year": 1994,
+  "director": "Quentin Tarantino",
+  "duration": 154,
+  "poster": "https://www.themoviedb.org/t/p/original/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+  "genre": [
+    "Action",
+    "Comedy"
+  ],
+  "rate": 9.9
+}
+
+### DELETE MOVIE
+DELETE http://127.0.0.1:3002/movies/04986507-b3ed-442c-8ae7-4c5df804f896
