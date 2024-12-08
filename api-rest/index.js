@@ -16,7 +16,8 @@ const app = express()
 app.disable('x-powered-by')
 
 // Safe methods: GET, HEAD, POST, OPTIONS
-// UNSAFE methods: PATCH, PUT, DELETE
+// Unsafe/complex methods: PATCH, PUT, DELETE
+// Unsafe/complex methods has something called CORS-PREFLIGHT
 
 app.use(express.json())
 
