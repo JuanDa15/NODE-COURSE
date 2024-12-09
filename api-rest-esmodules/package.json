@@ -1,0 +1,21 @@
+{
+  "name": "api-rest-esmodules",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "api-rest": "cross-env PORT=3002 node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cross-env": "7.0.3"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "mongodb": "6.11.0"
+  }
+}
